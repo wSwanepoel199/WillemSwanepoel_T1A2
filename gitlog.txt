@@ -1,0 +1,17 @@
+commit a834dabdaf89b563af29c55c849bb6465904b640
+Author: wSwanepoel199 <wjaco.swanepoel@gmail.com>
+Date:   Thu Oct 21 12:24:14 2021 +1100
+
+    moved files out of portfolio folder
+
+commit 351edbb8d7295e7c8a62c34af9f763424785ccc8
+Author: wSwanepoel199 <wjaco.swanepoel@gmail.com>
+Date:   Thu Oct 21 12:21:27 2021 +1100
+
+    master
+
+commit 32ff385b93d20041476c4491b05982e59de3dc50
+Author: wSwanepoel199 <wjaco.swanepoel@gmail.com>
+Date:   Thu Oct 21 11:50:22 2021 +1100
+
+    first commit of portolio webpage
