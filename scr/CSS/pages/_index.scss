@@ -1,4 +1,3 @@
-@import "./variable";
 // removes internal margin for body
 body{
   margin: 0;
@@ -83,7 +82,9 @@ header {
 
 @media screen and (max-width: 600px) {
   // Mobile navbar, moves all hidden links into a list format which can be revealed by selecting the icon
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;

@@ -1,7 +1,7 @@
-@use "./variable";
+@import "./variables/variable";
 
-@import "./index";
-@import "./about";
-@import "./blog";
-@import "./contact";
-@import "./works";
+@import "./pages/index";
+@import "./pages/about";
+@import "./pages/blog";
+@import "./pages/contact";
+@import "./pages/works";
