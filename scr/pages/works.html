@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/main.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <section>
+      <div>
+        <h1>Portfolio</h1>
+        <h6>by Willem Swanepoel</h6>
+      </div>
+    </section>
+  </header>
+  <section id="navbar">
+    <nav>
+      <div class="topnav" id="Topnav">
+        <a href="./works.html" id="active">Past Works</a>
+        <a href="./contact.html">Contact Us</a>
+        <a href="./about.html">About Me</a>
+        <a href="./blog.html">Blog</a>
+        <a href="../index.html">Home</a>
+
+        <!-- Hamburger bar icon -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <script>
+        // Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon
+        function myFunction() {
+          var x = document.getElementById("Topnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+      </script>
+    </nav>
+  </section>
+</body>
+</html>
