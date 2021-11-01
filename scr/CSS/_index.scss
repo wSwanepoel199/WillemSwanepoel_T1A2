@@ -1,9 +1,10 @@
+@import "./variable";
 // removes internal margin for body
 body{
   margin: 0;
 }
 
-// customise site header
+// customise site headeru
 header {
   background-color: $primary_colour;
   text-align: center;
@@ -48,9 +49,15 @@ header {
   font-size: 17px;
 }
 
+// Hides spacer used for responsive nav
+.topnav a#spacer{
+  display: none;
+} 
+
 // When hovering over links, changes background of link to white and text to black
 .topnav a:hover {
-  background-color: $tertiary_colour;
+  background-color: $primary_colour;
+  color: $secondary_colour;
 }
 
 // makes current page green and seperates from the other pages
@@ -72,7 +79,9 @@ header {
     float: right;
     display: block;
   }
+}
 
+@media screen and (max-width: 600px) {
   // Mobile navbar, moves all hidden links into a list format which can be revealed by selecting the icon
   .topnav.responsive {position: relative;}
   .topnav.responsive a.icon {
@@ -85,6 +94,16 @@ header {
     display: block;
     text-align: left;
   }
+
+  // used as a spacer
+  .topnav.responsive a#spacer{
+    display: block;
+    color: $secondary_colour;
+  }
+  .topnav.responsive a#spacer:hover{
+    background-color: $secondary_colour;
+  }
+
   .topnav.responsive a#active{
     font-size: 17px;
     display: inline-block;
