@@ -35,23 +35,20 @@ header {
 .topnav {
   background-color: $secondary_colour;
   overflow: hidden;
+  display: flex;
+  width: 100vw;
 }
 
 // Sets Links passing to 14px height and 16px width and moves them to right of navbar, keeps text in the center of the bar and colours it white. also applies to icon
 .topnav a {
-  float: right;
   display: block;
   color: $primary_colour;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  align-self: flex-end;
 }
-
-// Hides spacer used for responsive nav
-.topnav a#spacer{
-  display: none;
-} 
 
 // When hovering over links, changes background of link to white and text to black
 .topnav a:hover {
@@ -63,7 +60,8 @@ header {
 .topnav a#active {
   background-color: $accent_colour;
   color: $secondary_colour;
-  float: left;
+  align-self: flex-start;
+  margin-right: auto;
 }
 
 // hides icon
@@ -84,6 +82,7 @@ header {
   // Mobile navbar, moves all hidden links into a list format which can be revealed by selecting the icon
   .topnav.responsive {
     position: relative;
+    display: block;
   }
   .topnav.responsive a.icon {
     position: absolute;
@@ -94,15 +93,6 @@ header {
     float: none;
     display: block;
     text-align: left;
-  }
-
-  // used as a spacer
-  .topnav.responsive a#spacer{
-    display: block;
-    color: $secondary_colour;
-  }
-  .topnav.responsive a#spacer:hover{
-    background-color: $secondary_colour;
   }
 
   .topnav.responsive a#active{
