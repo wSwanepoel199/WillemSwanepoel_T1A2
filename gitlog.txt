@@ -1,3 +1,9 @@
+commit 760b73d269bf50a38ae00634a746a4a4dab305eb
+Author: wSwanepoel199 <wjaco.swanepoel@gmail.com>
+Date:   Thu Nov 4 12:30:39 2021 +1100
+
+    Removed Awesome Font burger icon, Hard Coded burger icon, animated burggewr icon, moved script into js file
+
 commit ed8d2e9909499c38cae410aa87928c03b4aa99da
 Author: wSwanepoel199 <wjaco.swanepoel@gmail.com>
 Date:   Mon Nov 1 15:03:42 2021 +1100
