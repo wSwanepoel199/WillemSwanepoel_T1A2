@@ -1,17 +1,35 @@
-commit a834dabdaf89b563af29c55c849bb6465904b640
+commit ed8d2e9909499c38cae410aa87928c03b4aa99da
 Author: wSwanepoel199 <wjaco.swanepoel@gmail.com>
-Date:   Thu Oct 21 12:24:14 2021 +1100
+Date:   Mon Nov 1 15:03:42 2021 +1100
 
-    moved files out of portfolio folder
+    swapped div and nav contained so that nav sits inside div
 
-commit 351edbb8d7295e7c8a62c34af9f763424785ccc8
+commit eea18dadcf7fe67cfee7882e0e85a79bd452a171
 Author: wSwanepoel199 <wjaco.swanepoel@gmail.com>
-Date:   Thu Oct 21 12:21:27 2021 +1100
+Date:   Mon Nov 1 14:51:51 2021 +1100
 
-    master
+    implimented flexbox logic to navbar
 
-commit 32ff385b93d20041476c4491b05982e59de3dc50
+commit 6808c4e8662e8f6c7604614f375a32f73e966c9b
 Author: wSwanepoel199 <wjaco.swanepoel@gmail.com>
-Date:   Thu Oct 21 11:50:22 2021 +1100
+Date:   Mon Nov 1 14:28:24 2021 +1100
 
-    first commit of portolio webpage
+    moved files around for better organisation
+
+commit f8785100ef095827918330d2d525c85b45704891
+Author: wSwanepoel199 <wjaco.swanepoel@gmail.com>
+Date:   Mon Nov 1 13:31:38 2021 +1100
+
+    Continued troubleshooting and forming better understanding of scss
+
+commit 12019be349208648a68224c39991ff04141412bd
+Author: wSwanepoel199 <wjaco.swanepoel@gmail.com>
+Date:   Mon Nov 1 12:03:30 2021 +1100
+
+    Styling navbat and site header
+
+commit 210f7a4a864e7190969b40f50d7bc623aa693642
+Author: wSwanepoel199 <wjaco.swanepoel@gmail.com>
+Date:   Mon Nov 1 09:53:42 2021 +1100
+
+    Set up file structure for portfolio assignment

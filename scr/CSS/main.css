@@ -51,6 +51,9 @@ header h1, header h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100vw;
 }
 
@@ -78,17 +81,86 @@ header h1, header h6 {
   margin-right: auto;
 }
 
-.topnav .icon {
+.menu-btn {
+  position: relative;
   display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.menu-btn_burger {
+  width: 25px;
+  height: 3px;
+  background: whitesmoke;
+  border-radius: 2.5px;
+  -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before, .menu-btn_burger::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  border-radius: 2.5px;
+  background: whitesmoke;
+  -webkit-box-shadow: 0 1px 2.5px rgba(255, 101, 47, 0.2);
+          box-shadow: 0 1px 2.5px rgba(255, 101, 47, 0.2);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn_burger::before {
+  -webkit-transform: translateY(-8px);
+          transform: translateY(-8px);
+}
+
+.menu-btn_burger::after {
+  -webkit-transform: translateY(8px);
+          transform: translateY(8px);
+}
+
+.menu-btn.open .menu-btn_burger {
+  background: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.menu-btn.open .menu-btn_burger::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  -webkit-transform: translateX(35px, -35px);
+          transform: translateX(35px, -35px);
+}
+
+.menu-btn.open .menu-btn_burger::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  -webkit-transform: translateX(35px, 35px);
+          transform: translateX(35px, 35px);
 }
 
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
   }
-  .topnav a.icon {
-    float: right;
-    display: block;
+  .topnav div.menu-btn {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
   }
 }
 
@@ -97,10 +169,10 @@ header h1, header h6 {
     position: relative;
     display: block;
   }
-  .topnav.responsive a.icon {
+  .topnav.responsive div.menu-btn.open {
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
   }
   .topnav.responsive a {
     float: none;

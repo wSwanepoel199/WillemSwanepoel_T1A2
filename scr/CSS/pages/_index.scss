@@ -3,7 +3,24 @@ body{
   margin: 0;
 }
 
-// customise site headeru
+// Highlights parts of the page to make debugging easier
+// section, div, nav, a{
+//   border: dotted;
+//   section{
+//     border-color: brown;
+//   }
+//   div{
+//     border-color: aqua;
+//   }
+//   nav{
+//     border-color: aquamarine;
+//   }
+//   a{
+//     border-color: blueviolet;
+//   }
+// }
+
+// customise site header
 header {
   background-color: $primary_colour;
   text-align: center;
@@ -32,10 +49,11 @@ header {
 }
 
 // Add a black background color to the top navigation
-.topnav {
+.topnav{
   background-color: $secondary_colour;
   overflow: hidden;
   display: flex;
+  align-items: center;
   width: 100vw;
 }
 
@@ -64,17 +82,62 @@ header {
   margin-right: auto;
 }
 
-// hides icon
-.topnav .icon {
+// burger menu icon
+.menu-btn{
+  position: relative;
   display: none;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.menu-btn_burger{
+  width: 25px;
+  height: 3px;
+  background: whitesmoke;
+  border-radius: 2.5px;
+  box-shadow: 0 2px  5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-btn_burger::before,.menu-btn_burger::after{
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 3px;
+  border-radius: 2.5px;
+  background: whitesmoke;
+  box-shadow: 0 1px  2.5px rgba(255,101,47,.2);
+  transition: all .5s ease-in-out;
+}
+.menu-btn_burger::before{
+  transform: translateY(-8px);
+}
+.menu-btn_burger::after{
+  transform: translateY(8px);
+}
+// burger menu animation
+.menu-btn.open .menu-btn_burger {
+  background: transparent;
+  box-shadow: none;
+}
+.menu-btn.open .menu-btn_burger::before {
+  transform: rotate(45deg);
+  transform: translateX(35px, -35px);
+}
+.menu-btn.open .menu-btn_burger::after {
+  transform: rotate(-45deg);
+  transform: translateX(35px, 35px);
 }
 
 // hides all links to pages that isn't current active and reveals icon when screen width is below 600px
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
+  .topnav div.menu-btn{
+    display: inline-flex;
   }
 }
 
@@ -84,10 +147,10 @@ header {
     position: relative;
     display: block;
   }
-  .topnav.responsive a.icon {
+  .topnav.responsive div.menu-btn.open {
     position: absolute;
-    right: 0;
     top: 0;
+    right: 0;
   }
   .topnav.responsive a {
     float: none;

@@ -9,39 +9,32 @@
   <title>Document</title>
 </head>
 <body>
+  <!-- Decorative Header -->
   <header class="header">
     <section>
       <div>
         <h1>Portfolio</h1><h6>by Willem Swanepoel</h6>
       </div>
     </section>
-  </header>
-  <section id="navbar">
-    <div></div>
+  </header
+  <!-- Navigation bar -->
+    <section id="navbar">
+    <div>
       <nav class="topnav" id="Topnav">
+        <!-- Navbar Links -->
         <a href="./index.html" id="active">Home</a>
         <a href="./pages/blog.html">Blog</a>
         <a href="./pages/works.html">Past Works</a>
         <a href="./pages/about.html">About Me</a>
         <a href="./pages/contact.html">Contact Me</a>
-
         <!-- Hamburger bar icon -->
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-          <i class="fa fa-bars"></i>
-        </a>
+        <div class="menu-btn">
+          <div class="menu-btn_burger"></div>
+        </div>
       </nav>
-      <script>
-        // Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon
-        function myFunction() {
-          var x = document.getElementById("Topnav");
-          if (x.className === "topnav") {
-            x.className += " responsive";
-          } else {
-            x.className = "topnav";
-          }
-        }
-      </script>
+      <script src="scripts/main.js"></script>
     </div>
-  </section>
+    </section>
+
 </body>
 </html>
