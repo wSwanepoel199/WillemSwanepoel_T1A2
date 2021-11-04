@@ -12,7 +12,7 @@ menuBtn.addEventListener('click', () => {
 
 const navResp = document.querySelector('.topnav');
 let navSmall = false;
-navResp.addEventListener('click', () => {
+menuBtn.addEventListener('click', () => {
   if(!navSmall) {
     navResp.classList.add('responsive');
     navSmall = true;

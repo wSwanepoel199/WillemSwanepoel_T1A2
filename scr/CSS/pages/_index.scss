@@ -98,7 +98,7 @@ header {
 .menu-btn_burger{
   width: 25px;
   height: 3px;
-  background: whitesmoke;
+  background: $primary_colour;
   border-radius: 2.5px;
   box-shadow: 0 2px  5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;
@@ -109,7 +109,7 @@ header {
   width: 25px;
   height: 3px;
   border-radius: 2.5px;
-  background: whitesmoke;
+  background: $primary_colour;
   box-shadow: 0 1px  2.5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;
 }
@@ -119,14 +119,20 @@ header {
 .menu-btn_burger::after{
   transform: translateY(8px);
 }
+.menu-btn:hover{
+  background: $primary_colour;
+  .menu-btn_burger,.menu-btn_burger::before,.menu-btn_burger::after{
+    background: $secondary_colour;
+  }
+}
 // burger menu animation
 .menu-btn.open .menu-btn_burger {
   background: transparent;
   box-shadow: none;
 }
 .menu-btn.open .menu-btn_burger::before {
-  transform: rotate(45deg);
   transform: translateX(35px, -35px);
+  transform: rotate(45deg);
 }
 .menu-btn.open .menu-btn_burger::after {
   transform: rotate(-45deg);

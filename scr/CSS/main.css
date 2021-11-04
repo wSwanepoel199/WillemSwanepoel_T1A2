@@ -102,7 +102,7 @@ header h1, header h6 {
 .menu-btn_burger {
   width: 25px;
   height: 3px;
-  background: whitesmoke;
+  background: #f7f7ff;
   border-radius: 2.5px;
   -webkit-box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
           box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
@@ -116,7 +116,7 @@ header h1, header h6 {
   width: 25px;
   height: 3px;
   border-radius: 2.5px;
-  background: whitesmoke;
+  background: #f7f7ff;
   -webkit-box-shadow: 0 1px 2.5px rgba(255, 101, 47, 0.2);
           box-shadow: 0 1px 2.5px rgba(255, 101, 47, 0.2);
   -webkit-transition: all .5s ease-in-out;
@@ -133,6 +133,14 @@ header h1, header h6 {
           transform: translateY(8px);
 }
 
+.menu-btn:hover {
+  background: #f7f7ff;
+}
+
+.menu-btn:hover .menu-btn_burger, .menu-btn:hover .menu-btn_burger::before, .menu-btn:hover .menu-btn_burger::after {
+  background: #070600;
+}
+
 .menu-btn.open .menu-btn_burger {
   background: transparent;
   -webkit-box-shadow: none;
@@ -140,10 +148,10 @@ header h1, header h6 {
 }
 
 .menu-btn.open .menu-btn_burger::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
   -webkit-transform: translateX(35px, -35px);
           transform: translateX(35px, -35px);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .menu-btn.open .menu-btn_burger::after {
