@@ -21,11 +21,15 @@ body{
 // }
 
 // customise site header
-header {
+.header {
   background-color: $primary_colour;
   text-align: center;
-  padding: 5%;
   font-size: 150%;
+  width: 100vw;
+  height: 15vh;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 
   section{
     display: flex;
@@ -51,10 +55,12 @@ header {
 // Add a black background color to the top navigation
 .topnav{
   background-color: $secondary_colour;
-  overflow: hidden;
+  overflow-y:scroll;
   display: flex;
   align-items: center;
   width: 100vw;
+  text-transform: uppercase;
+  position: absolute;
 }
 
 // Sets Links passing to 14px height and 16px width and moves them to right of navbar, keeps text in the center of the bar and colours it white. also applies to icon
@@ -139,6 +145,14 @@ header {
   transform: translateX(35px, 35px);
 }
 
+#background-img{
+  width: 100vw;
+  min-width: none;
+  margin-top: 48px;
+  position: relative;
+  z-index: -1;
+}
+
 // hides all links to pages that isn't current active and reveals icon when screen width is below 600px
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
@@ -150,7 +164,7 @@ header {
 @media screen and (max-width: 600px) {
   // Mobile navbar, moves all hidden links into a list format which can be revealed by selecting the icon
   .topnav.responsive {
-    position: relative;
+    position: fixed;
     display: block;
   }
   .topnav.responsive div.menu-btn.open {
@@ -163,9 +177,16 @@ header {
     display: block;
     text-align: left;
   }
-
   .topnav.responsive a#active{
     font-size: 17px;
     display: inline-block;
   }
+  
+}
+
+.fixed{
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 20;
 }

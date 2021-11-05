@@ -2,14 +2,23 @@ body {
   margin: 0;
 }
 
-header {
+.header {
   background-color: #f7f7ff;
   text-align: center;
-  padding: 5%;
   font-size: 150%;
+  width: 100vw;
+  height: 15vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-header section {
+.header section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,7 +34,7 @@ header section {
           align-items: center;
 }
 
-header section div {
+.header section div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -39,7 +48,7 @@ header section div {
           align-items: flex-start;
 }
 
-header h1, header h6 {
+.header h1, .header h6 {
   margin: 0;
   position: relative;
   color: #070600;
@@ -47,7 +56,7 @@ header h1, header h6 {
 
 .topnav {
   background-color: #070600;
-  overflow: hidden;
+  overflow-y: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -55,6 +64,8 @@ header h1, header h6 {
       -ms-flex-align: center;
           align-items: center;
   width: 100vw;
+  text-transform: uppercase;
+  position: absolute;
 }
 
 .topnav a {
@@ -161,6 +172,14 @@ header h1, header h6 {
           transform: translateX(35px, 35px);
 }
 
+#background-img {
+  width: 100vw;
+  min-width: none;
+  margin-top: 48px;
+  position: relative;
+  z-index: -1;
+}
+
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {
     display: none;
@@ -174,7 +193,7 @@ header h1, header h6 {
 
 @media screen and (max-width: 600px) {
   .topnav.responsive {
-    position: relative;
+    position: fixed;
     display: block;
   }
   .topnav.responsive div.menu-btn.open {
@@ -191,5 +210,12 @@ header h1, header h6 {
     font-size: 17px;
     display: inline-block;
   }
+}
+
+.fixed {
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 20;
 }
 /*# sourceMappingURL=main.css.map */

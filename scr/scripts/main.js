@@ -21,3 +21,13 @@ menuBtn.addEventListener('click', () => {
     navSmall = false;
   }
 });
+
+var height = $('.header').height();
+
+$(window).scroll(function() {
+  if($(this).scrollTop() > height){
+    $('.topnav').addClass('fixed');
+  }else{
+    $('.topnav').removeClass('fixed');
+  }
+});
