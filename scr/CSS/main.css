@@ -1,5 +1,17 @@
 body {
   margin: 0;
+  padding: 0;
+  overflow: scroll;
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE 10+ */
+}
+
+body::-webkit-scrollbar {
+  background: transparent;
+  /* Chrome/Safari/Webkit */
+  width: 0px;
 }
 
 .header {
@@ -7,7 +19,7 @@ body {
   text-align: center;
   font-size: 150%;
   width: 100vw;
-  height: 15vh;
+  height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,7 +68,6 @@ body {
 
 .topnav {
   background-color: #070600;
-  overflow-y: scroll;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,6 +101,12 @@ body {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-right: auto;
+}
+
+.topnav a#active:hover {
+  background-color: #ff5e5b;
+  color: #070600;
+  text-shadow: #08a045;
 }
 
 .menu-btn {
@@ -172,12 +189,47 @@ body {
           transform: translateX(35px, 35px);
 }
 
-#background-img {
-  width: 100vw;
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.intro #intro-body {
+  padding-top: 48px;
+  width: 100%;
   min-width: none;
-  margin-top: 48px;
-  position: relative;
   z-index: -1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: relative;
+}
+
+.intro #intro-body img {
+  width: 100%;
+}
+
+.intro p {
+  z-index: 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  position: absolute;
+  color: #f7f7ff;
+  text-shadow: #ff5e5b;
+  background: rgba(8, 160, 69, 0.5);
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  max-width: 50%;
 }
 
 @media screen and (max-width: 600px) {
@@ -195,6 +247,7 @@ body {
   .topnav.responsive {
     position: fixed;
     display: block;
+    z-index: 20;
   }
   .topnav.responsive div.menu-btn.open {
     position: absolute;

@@ -1,8 +1,15 @@
 // removes internal margin for body
 body{
   margin: 0;
+  padding: 0;
+  overflow:scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+  &::-webkit-scrollbar {
+    background: transparent; /* Chrome/Safari/Webkit */
+    width: 0px;
+  }
 }
-
 // Highlights parts of the page to make debugging easier
 // section, div, nav, a{
 //   border: dotted;
@@ -26,7 +33,7 @@ body{
   text-align: center;
   font-size: 150%;
   width: 100vw;
-  height: 15vh;
+  height: 150px;
   display: flex;
   align-content: center;
   justify-content: center;
@@ -55,7 +62,6 @@ body{
 // Add a black background color to the top navigation
 .topnav{
   background-color: $secondary_colour;
-  overflow-y:scroll;
   display: flex;
   align-items: center;
   width: 100vw;
@@ -86,6 +92,11 @@ body{
   color: $secondary_colour;
   align-self: flex-start;
   margin-right: auto;
+}
+.topnav a#active:hover{
+  background-color: $accent_compliment_colour;
+  color: $secondary_colour;
+  text-shadow: $accent_colour;
 }
 
 // burger menu icon
@@ -145,12 +156,34 @@ body{
   transform: translateX(35px, 35px);
 }
 
-#background-img{
-  width: 100vw;
-  min-width: none;
-  margin-top: 48px;
-  position: relative;
-  z-index: -1;
+.intro{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  #intro-body{
+    padding-top: 48px;
+    width: 100%;
+    min-width: none;
+    z-index: -1;
+    align-self: center;
+    position: relative;
+    img{
+      width: 100%;
+    }
+  }
+  p{
+    z-index: 1;
+    align-self: center;
+    position: absolute;
+    color: $primary_colour;
+    text-shadow: $accent_compliment_colour;
+    background: rgba($color: $accent_colour, $alpha: 0.5);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 50%;
+  }
 }
 
 // hides all links to pages that isn't current active and reveals icon when screen width is below 600px
@@ -166,6 +199,7 @@ body{
   .topnav.responsive {
     position: fixed;
     display: block;
+    z-index: 20;
   }
   .topnav.responsive div.menu-btn.open {
     position: absolute;
