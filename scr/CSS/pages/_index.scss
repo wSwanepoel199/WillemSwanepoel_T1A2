@@ -96,7 +96,14 @@ body{
 .topnav a#active:hover{
   background-color: $accent_compliment_colour;
   color: $secondary_colour;
-  text-shadow: $accent_colour;
+}
+
+// sticks navbar to top of screen once you scroll past it
+.fixed{
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 20;
 }
 
 // burger menu icon
@@ -136,12 +143,15 @@ body{
 .menu-btn_burger::after{
   transform: translateY(8px);
 }
+
+// inverts colours of burger icon when hovering over it
 .menu-btn:hover{
   background: $primary_colour;
   .menu-btn_burger,.menu-btn_burger::before,.menu-btn_burger::after{
     background: $secondary_colour;
   }
 }
+
 // burger menu animation
 .menu-btn.open .menu-btn_burger {
   background: transparent;
@@ -156,36 +166,59 @@ body{
   transform: translateX(35px, 35px);
 }
 
+// Itroduction section of homepage
 .intro{
+  max-width: 100%;
+  max-height: 40%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: center;
+  margin-top: 46px;
 
-  #intro-body{
-    padding-top: 48px;
-    width: 100%;
-    min-width: none;
-    z-index: -1;
-    align-self: center;
+  #background{
     position: relative;
-    img{
+
+
+    #background-img{
       width: 100%;
+      height: 100%;
     }
   }
-  p{
-    z-index: 1;
-    align-self: center;
+  #intro-body{
     position: absolute;
-    color: $primary_colour;
-    text-shadow: $accent_compliment_colour;
-    background: rgba($color: $accent_colour, $alpha: 0.5);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    max-width: 50%;
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+
+    img{
+      width: 200px;
+      height: 200px;
+      overflow: hidden;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    section{
+      color: $primary_colour;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      max-width: 25%;
+    }
   }
+  
 }
 
+.fixed{
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 20;
+}
 // hides all links to pages that isn't current active and reveals icon when screen width is below 600px
 @media screen and (max-width: 600px) {
   .topnav a:not(:first-child) {display: none;}
