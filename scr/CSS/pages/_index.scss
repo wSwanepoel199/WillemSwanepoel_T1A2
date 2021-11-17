@@ -67,43 +67,39 @@ body{
   width: 100vw;
   text-transform: uppercase;
   position: absolute;
+
+  // Sets Links passing to 14px height and 16px width and moves them to right of navbar, keeps text in the center of the bar and colours it white. also applies to icon
+  a{
+    display: block;
+    color: $primary_colour;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    align-self: flex-end;
+  }
 }
 
 // Sets Links passing to 14px height and 16px width and moves them to right of navbar, keeps text in the center of the bar and colours it white. also applies to icon
-.topnav a {
-  display: block;
-  color: $primary_colour;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-  align-self: flex-end;
-}
 
 // When hovering over links, changes background of link to white and text to black
 .topnav a:hover {
   background-color: $primary_colour;
   color: $secondary_colour;
+  text-shadow: 2px 2px 5px $accent_colour;
 }
 
 // makes current page green and seperates from the other pages
 .topnav a#active {
   background-color: $accent_colour;
-  color: $secondary_colour;
+  color: $primary_colour;
   align-self: flex-start;
   margin-right: auto;
 }
 .topnav a#active:hover{
   background-color: $accent_compliment_colour;
   color: $secondary_colour;
-}
-
-// sticks navbar to top of screen once you scroll past it
-.fixed{
-  position: fixed;
-  width: 100vw;
-  top: 0;
-  z-index: 20;
+  text-shadow: 2px 2px 5px $primary_colour;
 }
 
 // burger menu icon
@@ -118,16 +114,16 @@ body{
   transition: all .5s ease-in-out;
   padding-top: 4px;
   padding-bottom: 4px;
-}
-.menu-btn_burger{
+
+  .menu-btn_burger{
   width: 25px;
   height: 3px;
   background: $primary_colour;
   border-radius: 2.5px;
   box-shadow: 0 2px  5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;
-}
-.menu-btn_burger::before,.menu-btn_burger::after{
+  }
+  .menu-btn_burger::before,.menu-btn_burger::after{
   content: '';
   position: absolute;
   width: 25px;
@@ -136,14 +132,14 @@ body{
   background: $primary_colour;
   box-shadow: 0 1px  2.5px rgba(255,101,47,.2);
   transition: all .5s ease-in-out;
+  }
+  .menu-btn_burger::before{
+    transform: translateY(-8px);
+  }
+  .menu-btn_burger::after{
+    transform: translateY(8px);
+  }
 }
-.menu-btn_burger::before{
-  transform: translateY(-8px);
-}
-.menu-btn_burger::after{
-  transform: translateY(8px);
-}
-
 // inverts colours of burger icon when hovering over it
 .menu-btn:hover{
   background: $primary_colour;
@@ -166,34 +162,27 @@ body{
   transform: translateX(35px, 35px);
 }
 
+
 // Itroduction section of homepage
-.intro{
-  max-width: 100%;
-  max-height: 40%;
+#intro{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
-  margin-top: 46px;
+  background-position: 50% 0px;
+  background: $accent_compliment_colour url("../docs/Computer\ with\ Code.jpg") 50% 0 no-repeat fixed;
+  background-size: cover;
+  max-width: 100%;
+  padding: 5em 0;
+  transition: padding 0.2s linear;
+  text-align: flex-start;
 
-  #background{
-    position: relative;
-
-
-    #background-img{
-      width: 100%;
-      height: 100%;
-    }
-  }
   #intro-body{
-    position: absolute;
-    width: 100%;
-    height: 40%;
+    position: relative;
+    height: 300px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    align-content: center;
+    @include wrap(90%);
 
     img{
       width: 200px;
@@ -201,23 +190,62 @@ body{
       overflow: hidden;
       object-fit: cover;
       border-radius: 50%;
+      margin-left: auto;
+      margin-right: 5%;
     }
     section{
+      text-shadow: 2px 2px 5px $secondary_colour;
       color: $primary_colour;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
       max-width: 25%;
+      text-align: center;
+      background-color: $accent_colour 20% 0;
+      margin-right: auto;
+      margin-left: 5%;
     }
   }
   
 }
 
-.fixed{
-  position: fixed;
-  width: 100vw;
-  top: 0;
-  z-index: 20;
+#body{
+  padding: 5em 0;
+  border-bottom: 1px solid $secondary_colour;
+  background: $primary_colour;
+  text-align: center;
+
+  div{
+    @include wrap(90%);
+
+    h1{
+      display: block;
+      font-size: 2em;
+      margin-block-start: 0.67em;
+      margin-block-end: 0.67em;
+      margin-inline-start: 0px;
+      margin-inline-end: 0px;
+      font-weight: bold;
+      margin-bottom: 0.625em;
+      text-transform: uppercase;
+    }
+  }
+}
+
+#footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $secondary_colour;
+  div{
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    a{
+      text-align: center;
+      color: $primary_colour;
+      align-self: center;
+    }
+  }
 }
 // hides all links to pages that isn't current active and reveals icon when screen width is below 600px
 @media screen and (max-width: 600px) {
@@ -225,9 +253,7 @@ body{
   .topnav div.menu-btn{
     display: inline-flex;
   }
-}
 
-@media screen and (max-width: 600px) {
   // Mobile navbar, moves all hidden links into a list format which can be revealed by selecting the icon
   .topnav.responsive {
     position: fixed;
@@ -248,9 +274,44 @@ body{
     font-size: 17px;
     display: inline-block;
   }
-  
+
+  #intro {
+    #intro-body{
+      @include wrap(95%);
+      
+      img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+      }
+
+      section{
+        max-width: 50%;
+      }
+    }
+  }
 }
 
+@media screen and (max-width: 400px){
+  #intro{
+    #intro-body{
+      img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-left: 0;
+      }
+      section{
+        font-size: 70%;
+        margin-right: 0;
+        max-width: 50%;
+      }
+    }
+  }
+}
+
+
+// sticks navbar to top of screen once you scroll past it
 .fixed{
   position: fixed;
   width: 100vw;
