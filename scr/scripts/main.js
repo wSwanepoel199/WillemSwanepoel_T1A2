@@ -31,3 +31,19 @@ $(window).scroll(function() {
     $('.topnav').removeClass('fixed');
   }
 });
+
+var id = $("#active");
+if (id.text().indexOf("Home") !== -1){
+  $("#blogs").load("./pages/blog.html #main", function(){ 
+    $("#blog").attr("src", "./docs/waterfall.jpg");
+    var id = $(".fakeimg");
+    if (id.has('img').length){
+    $('img').closest("div.fakeimg").addClass('realimg').removeClass('fakeimg');
+    }
+  })
+}
+
+var id = $(".fakeimg");
+if (id.has('img').length){
+  $('img').closest("div.fakeimg").addClass('realimg').removeClass('fakeimg');
+}

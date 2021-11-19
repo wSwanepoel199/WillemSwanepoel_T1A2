@@ -163,7 +163,7 @@ body{
 }
 
 
-// Itroduction section of homepage
+// Itroduction section of homepage, sets persistant background and controls profile picture and short blurb next to it
 #intro{
   display: flex;
   flex-direction: column;
@@ -173,6 +173,7 @@ body{
   background-size: cover;
   max-width: 100%;
   padding: 5em 0;
+  margin-top: 48px;
   transition: padding 0.2s linear;
   text-align: flex-start;
 
@@ -206,6 +207,8 @@ body{
   
 }
 
+
+// Main information section, detailing purpose of website and slightly more indepth summery of owner.
 #body{
   padding: 5em 0;
   border-bottom: 1px solid $secondary_colour;
@@ -229,6 +232,7 @@ body{
   }
 }
 
+// bottem section linking to external links like Github
 #footer{
   display: flex;
   flex-direction: column;
@@ -292,21 +296,33 @@ body{
   }
 }
 
+// controls responsiveness of main intro body, modifying profile pic dimentions and font size of body text.
 @media screen and (max-width: 400px){
-  #intro{
+  #intro{  
+    padding: 30px 0;
+    margin-top: 48px;
     #intro-body{
+      position: relative;
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       img{
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
         border-radius: 50%;
-        margin-left: 0;
+        margin: 0;
       }
       section{
-        font-size: 70%;
-        margin-right: 0;
-        max-width: 50%;
+        font-size: 90%;
+        margin: 0;
+        max-width: 80%;
       }
     }
+  }
+  #body{
+    padding: 2em 0;
   }
 }
 
