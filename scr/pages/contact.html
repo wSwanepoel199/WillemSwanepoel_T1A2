@@ -35,6 +35,38 @@
       </nav>
     </div>
   </section>
+  <section class="contact-section">
+    <h1>Contact Form</h1>
+    <!-- modify this form HTML and place wherever you want your form -->
+    <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/f/mjvjnqwr" method="post">
+      <fieldset id="fs-frm-inputs">
+        <div class="name">
+        <label for="full-name"><h3>Full Name</h3></label>
+        <input type="text" name="name" id="full-name" placeholder="First and Last" required="">
+        </div>
+        <div class="email">
+        <label for="email-address"><h3>Email Address</h3></label>
+        <input type="email" name="_replyto" id="email-address" placeholder="email@domain.tld" required="">
+        </div>
+        <div class="message">
+        <label for="message"><h3>Message</h3></label>
+        <textarea rows="5" name="message" id="message" placeholder="Aenean lacinia bibendum nulla sed consectetur. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Donec ullamcorper nulla non metus auctor fringilla nullam quis risus." required=""></textarea>
+        <input type="hidden" name="_subject" id="email-subject" value="Contact Form Submission">
+        <input type="submit" value="Submit" class="submit">
+        </div>
+      </fieldset>
+    </form>
+  </section>
+
+    <!-- Footer of Webpage with Links to external site for quick access -->
+  <footer>
+    <section id="footer">
+      <div>
+        <a href="">GitHub</a><a href="">Email</a><a href="">Linkedin</a>
+      </div>
+    </section>
+  </footer>
+
       <!-- Imports jQuert's CDN -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <!-- Links personal JS file -->

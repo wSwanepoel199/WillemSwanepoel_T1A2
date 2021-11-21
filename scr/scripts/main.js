@@ -1,29 +1,24 @@
+// Used for burger button animation and opening mobile navbar
 const menuBtn = document.querySelector('.menu-btn');
+const navResp = document.querySelector('.topnav');
+const secResp = document.querySelector('#navbar');
 let menuOpen = false;
 menuBtn.addEventListener('click', () => {
   if(!menuOpen) {
     menuBtn.classList.add('open');
+    navResp.classList.add('responsive');
+    secResp.classList.add('response');
     menuOpen = true;
   } else {
     menuBtn.classList.remove('open');
+    navResp.classList.remove('responsive');
+    secResp.classList.remove('response');
     menuOpen = false;
   }
 });
 
-const navResp = document.querySelector('.topnav');
-let navSmall = false;
-menuBtn.addEventListener('click', () => {
-  if(!navSmall) {
-    navResp.classList.add('responsive');
-    navSmall = true;
-  } else {
-    navResp.classList.remove('responsive');
-    navSmall = false;
-  }
-});
-
+// When scrolling past Navbar this will cause the bar to become fixed to top of screen for easy constant access
 var height = $('.header').height();
-
 $(window).scroll(function() {
   if($(this).scrollTop() > height){
     $('.topnav').addClass('fixed');
@@ -32,18 +27,21 @@ $(window).scroll(function() {
   }
 });
 
+// Used for porting main, most recent, blog post from the blog page to the main index page, also updates image path and removes "fakeimg" class of img parent.
 var id = $("#active");
 if (id.text().indexOf("Home") !== -1){
-  $("#blogs").load("./pages/blog.html #main", function(){ 
-    $("#blog").attr("src", "./docs/waterfall.jpg");
+  $("#blogs").load("./pages/blog.html #main", function(){
+    var newPath = $("#blog").attr("src").replace("..","."); 
+    $("#blog").attr("src", newPath);
     var id = $(".fakeimg");
     if (id.has('img').length){
-    $('img').closest("div.fakeimg").addClass('realimg').removeClass('fakeimg');
+    $('img').closest("div.fakeimg").removeClass('fakeimg');
     }
   })
 }
 
+// The removes "fakeimg" code but for general use due to incompatibility with above code
 var id = $(".fakeimg");
 if (id.has('img').length){
-  $('img').closest("div.fakeimg").addClass('realimg').removeClass('fakeimg');
+  $('img').closest("div.fakeimg").removeClass('fakeimg');
 }

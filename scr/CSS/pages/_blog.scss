@@ -1,5 +1,4 @@
 .blogs{
-  margin-top: 48px;
 
   #blogs{
     display: flex;
@@ -11,24 +10,31 @@
     article{
       width: 50%;
       font-size: 90%;
+      display: flex;
+      background-color: $primary_colour;
+
+      // Add a card effect for articles
+      .card {
+        background-color: $primary_colour;
+        padding: 20px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include wrap(90%);
+
+        .fakeimg {
+          background-color: #aaa;
+          width: 100%;
+          height: 200px;
+        }
+      }
     }
 
     #main{
       width: 100%;
       font-size: 110%;
-    }
-
-
-    // Add a card effect for articles
-    .card {
-      background-color: $primary_colour;
-      padding: 20px;
-    }
-
-    .fakeimg {
-      background-color: #aaa;
-      width: 100%;
-      height: 200px;
     }
 
     #blog{

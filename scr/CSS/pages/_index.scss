@@ -2,6 +2,7 @@
 body{
   margin: 0;
   padding: 0;
+  border: 0;
   overflow:scroll;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE 10+ */
@@ -66,7 +67,7 @@ body{
   align-items: center;
   width: 100vw;
   text-transform: uppercase;
-  position: absolute;
+  position: relative;
 
   // Sets Links passing to 14px height and 16px width and moves them to right of navbar, keeps text in the center of the bar and colours it white. also applies to icon
   a{
@@ -173,7 +174,6 @@ body{
   background-size: cover;
   max-width: 100%;
   padding: 5em 0;
-  margin-top: 48px;
   transition: padding 0.2s linear;
   text-align: flex-start;
 
@@ -260,7 +260,7 @@ body{
 
   // Mobile navbar, moves all hidden links into a list format which can be revealed by selecting the icon
   .topnav.responsive {
-    position: fixed;
+    position: absolute;
     display: block;
     z-index: 20;
   }
@@ -277,6 +277,10 @@ body{
   .topnav.responsive a#active{
     font-size: 17px;
     display: inline-block;
+  }
+
+  .response{
+    margin-bottom: 48px;
   }
 
   #intro {
