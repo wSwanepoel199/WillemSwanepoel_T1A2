@@ -27,7 +27,7 @@ $(window).scroll(function() {
   }
 });
 
-// Used for porting main, most recent, blog post from the blog page to the main index page, also updates image path and removes "fakeimg" class of img parent.
+// Used for porting main, most recent, blog post from the blog page to the main index page, also updates image path and replaces img parent class "fakeimg" with "realimg".
 var id = $("#active");
 if (id.text().indexOf("Home") !== -1){
   $("#blogs").load("./pages/blog.html #main", function(){
@@ -35,13 +35,13 @@ if (id.text().indexOf("Home") !== -1){
     $("#blog").attr("src", newPath);
     var id = $(".fakeimg");
     if (id.has('img').length){
-    $('img').closest("div.fakeimg").removeClass('fakeimg');
+      $('img').closest("div.fakeimg").removeClass('fakeimg').addClass('realimg');
     }
   })
 }
 
-// The removes "fakeimg" code but for general use due to incompatibility with above code
+// Just the code replacing img parent class code but for general cause it doesn't play well with homepage
 var id = $(".fakeimg");
 if (id.has('img').length){
-  $('img').closest("div.fakeimg").removeClass('fakeimg');
+  $('img').closest("div.fakeimg").removeClass('fakeimg').addClass('realimg');
 }
