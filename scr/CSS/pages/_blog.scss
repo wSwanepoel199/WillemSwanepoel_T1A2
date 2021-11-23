@@ -57,9 +57,14 @@
       }
     }
 
-    @media screen and (max-width: 400px){
+    @media screen and (max-width: 500px){
       #blog{
-        width: 10em
+        width: 100%
+      }
+      .realimg{
+        width: 100%;
+        display: flex;
+        justify-content: center;
       }
     }
   }
