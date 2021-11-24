@@ -10,8 +10,10 @@ The purpose of this portfolio webpage is to act as a hub of my programming exper
 
 It features a responsive nav-bar that collapses into dropdown on smaller screens as well as sticks to top of page when scrolling past it allowing for easy navigation constantly. The page also includes links to my Gidhub and Linkedin as well as email incase personal contant wants to be made. The page also contains a contanct form and blog, mostly empty right now, where thoughts and opinions can be shared. The latest blog post is also automatically posted to main homepage to allow for easy viewing.
 
-![Sitemap](image.jpg)
-![Site Screen Shots](https://github.com/wSwanepoel199/WillemSwanepoel_T1A2/blob/main/docs/Blog%20Page%20Screen%20Shot.png)
+The target audience are employers or clients looking to hire a developer.
+
+![Sitemap](https://github.com/wSwanepoel199/WillemSwanepoel_T1A2/blob/main/docs/SiteMap.png?raw=true)
+![Site Screen Shots](https://github.com/wSwanepoel199/WillemSwanepoel_T1A2/blob/main/docs/Blog%20Page%20Screen%20Shot.png?raw=true)
 ![Site Screen Shots](https://github.com/wSwanepoel199/WillemSwanepoel_T1A2/blob/main/docs/Home%20Page%20Screen%20Shot.png?raw=true)
 ![Site Screen Shots](https://github.com/wSwanepoel199/WillemSwanepoel_T1A2/blob/main/docs/Contact%20Form%20Screen%20Shot.png?raw=true)
-![Site Screen Shots](image.jpg)
+![Tech Stack](https://github.com/wSwanepoel199/WillemSwanepoel_T1A2/blob/main/docs/Tech%20Stack.png?raw=true)
