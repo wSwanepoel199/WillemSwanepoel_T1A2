@@ -1,8 +1,14 @@
-.contact-section form{
+// Controls how form looks, no responsive elements needed as it scales pretty well to smaller resolution devices
+.contact-section
+  h1{
+    text-align: center;
+  }
+  form{
   width: 100%;
   height: 60vh;
   h1{
     text-align: center;
+    margin-left: auto;
   }
   fieldset{
     display: flex;

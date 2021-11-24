@@ -1,3 +1,4 @@
+// Controls the layout of the blog, allowing the main article to be the center of attention and the other sub articles, to appear below as more minor
 .blogs{
 
   #blogs{
@@ -18,7 +19,7 @@
       display: flex;
       background-color: $primary_colour;
 
-      // Add a card effect for articles
+      // Controls the individual 'cards' which make up the blog posts, allowinng for a conforming universal design
       .card {
         @include wrap(90%);
         background-color: $primary_colour;
@@ -44,27 +45,34 @@
         }
 
         #blog{
+          width: 100%;
           height: 100%;
           object-fit: scale-down;
         }
+        // Responsive Design section to update all articles to look better on smaller devices and eventually hide images to reduce clutter
+        @media screen and (max-width: 300px){
+          #blog{
+            width: 100%;
+            display: none;
+          }
+          .realimg{
+            display: none;
+          }
+          .fakeimg{
+            display: none;
+          }
+        }
+        @media screen and (max-width: 600px) {
+          .realimg{
+            height: 10em;
+          }
+        }
       }
     }
-
     @media screen and (max-width: 800px) {
-      article, #main {
+      article{
         width: 100%;
         padding: 0;
-      }
-    }
-
-    @media screen and (max-width: 500px){
-      #blog{
-        width: 100%
-      }
-      .realimg{
-        width: 100%;
-        display: flex;
-        justify-content: center;
       }
     }
   }

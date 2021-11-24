@@ -1,10 +1,11 @@
+// details the general card layouts for past work.
 #pastWork{
   width: 100vw;
 
-  .firstProject{
+  #post{
     display: flex;
     width: 100%;
-    border-bottom: 1px solid #070600;
+    border-bottom: 1px solid $secondary_colour;
   }
 
   .img{
@@ -26,46 +27,19 @@
     justify-content: center;
     width: 49%;
   }
-
-  .placeHolder{
-    display: flex;
-    width: 100%;
-    border-bottom: 1px solid #070600;
-
-  }
 }
 
+// response section that hides image and spreads text to cover full block
 @media screen and (max-width: 600px){
   #pastWork{
-    width: 100vw;
-  
-    .firstProject{
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      border-bottom: 1px solid #070600;
-    }
-  
+
     .img{
-      width: 49%;
-      height: 400px;
       display: none;
-      justify-content: center;
     }
-  
+
     #workBody{
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
       width: 100%;
-    }
-  
-    .placeHolder{
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      border-bottom: 1px solid #070600;
     }
   }
 }

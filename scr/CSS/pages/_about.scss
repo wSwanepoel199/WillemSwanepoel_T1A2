@@ -1,0 +1,46 @@
+// Controls About me body
+#about{
+  background-color: $primary_colour;
+  .title{
+    background-color: $primary_colour;
+    border-bottom: 1px solid $secondary_colour;
+    text-align: center;
+    padding-block-start: 0.83em;
+    padding-block-end: 0.83em;
+  }
+  // controlls main about me section
+  #body{
+    @include wrap(90%);
+    text-align: center;
+    #aboutBody{
+      a{
+        font-weight: bold;
+        font-size: 1em;
+      }
+    }
+  }
+  // controlls main history section
+  #history{
+    @include wrap(90%);
+    text-align: center;
+  }
+  // controlls main skills section
+  #skills{
+    @include wrap(90%);
+    text-align: center;
+    a{
+      font-weight: bold;
+      font-size: 1em;
+    }
+  }
+  // updates about, history and skills sections to reduce font, and update wrap and padding to be more mobile friendly
+  @media screen and (max-width: 300px){
+    #body, #history, #skills{
+      font-size: 75%;
+      @include wrap(95%);
+      ul{
+        padding-left: 20px;
+      }
+    }
+  }
+}
