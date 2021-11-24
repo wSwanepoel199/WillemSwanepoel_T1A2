@@ -1,6 +1,7 @@
 # Willem Swanepoel Portfolio Webpage readme.md
 
-[Page URL](https://www.example.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/b3e25319-22ed-4ebe-a513-3a8f78d45583/deploy-status)](https://app.netlify.com/sites/willemswan-portfolio/deploys)
+[Page URL](https://willemswan-portfolio.netlify.app/index.html)
 [GitHub Repo](https://github.com/wSwanepoel199/WillemSwanepoel_T1A2)
 
 Discription:
