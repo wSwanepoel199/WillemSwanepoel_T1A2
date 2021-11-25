@@ -1,25 +1,16 @@
 body {
+  width: 100%s;
   margin: 0;
   padding: 0;
   border: 0;
-  overflow: scroll;
-  scrollbar-width: none;
-  /* Firefox */
-  -ms-overflow-style: none;
-  /* IE 10+ */
-}
-
-body::-webkit-scrollbar {
-  background: transparent;
-  /* Chrome/Safari/Webkit */
-  width: 0px;
+  background-color: #f7f7ff;
 }
 
 .header {
   background-color: #f7f7ff;
   text-align: center;
   font-size: 150%;
-  width: 100vw;
+  width: 100%;
   height: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -79,7 +70,7 @@ body::-webkit-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100vw;
+  width: 100%;
   text-transform: uppercase;
   position: relative;
 }
@@ -117,7 +108,7 @@ body::-webkit-scrollbar {
 
 .fixed {
   position: fixed;
-  width: 100vw;
+  width: 100%;
   top: 0;
   z-index: 20;
 }
@@ -356,7 +347,7 @@ body::-webkit-scrollbar {
   .topnav.fixedResponse {
     position: fixed;
     display: block;
-    width: 100vw;
+    width: 100%;
     top: 0;
     z-index: 20;
   }
@@ -585,22 +576,25 @@ body::-webkit-scrollbar {
   }
 }
 
-.contact-section
-h1 {
+.contact-section {
+  padding-bottom: 10px;
+}
+
+.contact-section h1 {
   text-align: center;
 }
 
-form {
+.contact-section form {
   width: 100%;
   height: 60vh;
 }
 
-form h1 {
+.contact-section form h1 {
   text-align: center;
   margin-left: auto;
 }
 
-form fieldset {
+.contact-section form fieldset {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -616,7 +610,7 @@ form fieldset {
   height: 100%;
 }
 
-form fieldset div {
+.contact-section form fieldset div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -628,30 +622,30 @@ form fieldset div {
       align-content: flex-start;
 }
 
-form fieldset h3 {
+.contact-section form fieldset h3 {
   margin: 0;
   margin-bottom: 5px;
 }
 
-form fieldset .name input {
+.contact-section form fieldset .name input {
   width: 50%;
   height: 2em;
 }
 
-form fieldset .email input {
+.contact-section form fieldset .email input {
   width: 50%;
   height: 2em;
 }
 
-form fieldset .message {
+.contact-section form fieldset .message {
   height: 40%;
 }
 
-form fieldset .message textarea {
+.contact-section form fieldset .message textarea {
   height: 100%;
 }
 
-form fieldset .message .submit {
+.contact-section form fieldset .message .submit {
   width: 10em;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
@@ -660,7 +654,14 @@ form fieldset .message .submit {
 }
 
 #pastWork {
-  width: 100vw;
+  width: 100%;
+}
+
+#pastWork a h2 {
+  text-align: center;
+  padding: 1em;
+  margin: 0;
+  border-bottom: 1px solid #070600;
 }
 
 #pastWork #post {

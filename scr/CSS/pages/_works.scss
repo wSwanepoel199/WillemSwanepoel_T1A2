@@ -1,6 +1,14 @@
 // details the general card layouts for past work.
 #pastWork{
-  width: 100vw;
+  width: 100%;
+  a{
+    h2{
+      text-align: center;
+      padding: 1em;
+      margin: 0;
+      border-bottom: 1px solid $secondary_colour;
+    }
+  }
 
   #post{
     display: flex;
